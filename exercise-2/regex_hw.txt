@@ -41,8 +41,8 @@ Now consider the following comma-delimited rows of data (this is a small number 
 	744,R,2,MIBA,1096
 
 5.  Write a regular expression that will match any row with an `NA` in the final column.  
-ANSWER:________________________________________________
+ANSWER:(\d.*NA)
 
 6.  Write a regular expression that will match all rows for where `plot_num` (column 1) is either 740, 741, or 742, and `replicate` (column 3) is either 1 or 4.  
-ANSWER:________________________________________________
+ANSWER:(74[0-2],R,[^2-3,5]\D.*)
 	
