@@ -1,0 +1,77 @@
+---
+title: "exercise8"
+author: "Christina Zhou"
+date: "March 1, 2017"
+output: md_document
+---
+
+```{r}
+                      
+cocoli_dat <- read.table("~/Desktop/eeb-177/class-assignments/tues-2-21-2017/cocoli.txt", header = TRUE)
+head(cocoli_dat)
+str(cocoli_dat)
+
+View(cocoli_dat)
+
+sizes_in_1994 <- cocoli_dat$dbh1
+names(sizes_in_1994) <-cocoli_dat$tag
+sizes_in_1994[1] #subset a vectir by position
+sizes_in_1994["00001"] #subset a vector by name
+         
+sizes_in_1997 <- cocoli_dat$dbh1
+names(sizes_in_1997) <-cocoli_dat$tag
+
+sizes_in_1998 <- cocoli_dat$dbh1
+names(sizes_in_1998) <-cocoli_dat$tag
+
+# find all instances of dbh = 171
+sizes_in_1994 = 171
+
+#we want to know the fate of all trees that began with dbh 171
+#first, we makes a list of trees that have 171 dbh in 1994
+trees_171_1994= which(sizes_in_1994 == 171)
+trees_171_1994
+
+#in the 1997 list, find these individuals that used to eb 171mm
+sizes_in_1997[trees_171_1994]
+
+#calculate RGR between 1997 - 1994
+# (size in 1997 - size in 1994 )/ size in 1994
+yearly_RGR_1 = ((cocoli_dat$dbh2-cocoli_dat$dbh1)/(cocoli_dat$dbh1))/3
+yearly_RGR_1
+#add the RGR column
+cocoli_dat$rgr1 - yearly_RGR_1
+View(cocoli_dat)
+```
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+# make histograms with hist()
+#barplots with barplot()
+#boxplots with boxplot()
+#scatteplots with plot()
+
+hist(cocoli_dat$dbh1, xlab = "DBH in 1994(mm)", main = "Distributions of sizes in 1994", col = "green")
+#xlab means label x
+#main means main title
+
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r}
+library(ggplot2)
+ggplot(cocoli_dat) + geom_histogram(aes(dbh1)) + geom_histogram(aes(dbh2), fill = "green", alpha = .2) + ggtitle("Distribution of sizesin 1994")
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
