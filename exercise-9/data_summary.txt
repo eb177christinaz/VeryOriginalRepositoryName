@@ -1,0 +1,234 @@
+
+                           PyRate - 20170222
+
+           Bayesian estimation of speciation and extinction
+                  rates from fossil occurrence data        
+
+               Daniele Silvestro, Jan Schnitzler et al.
+                        pyrate.help@gmail.com
+
+
+
+
+The analysis includes 211 species (0 were excluded)
+Using Gamma priors on the birth-death rates (G_l[1.1,1.1], G_m[1.1,1.1]).
+
+
+DATA SUMMARY
+
+211 species included in the data set
+51 species have a single occurrence, 9 species are extant
+2946 fossil occurrences (1 replicates), ranging from 54.654 (+/- 0.0) to 0.001 (+/- 0.0) Ma
+
+Taxon	FA	LA
+Aelurodon	15.418	10.36	
+Aelurodon_asthenostylus	18.611	13.824	
+Aelurodon_ferox	18.81	6.868	
+Aelurodon_mcgrewi	14.793	12.324	
+Aelurodon_montanensis	13.856	13.856	
+Aelurodon_stirtoni	20.941	10.334	
+Aelurodon_taxoides	22.326	4.905	
+Aelurodon_wheelerianus	18.171	18.171	
+Alopex	4.627	4.627	
+Alopex_lagopus	1.354	0.001	
+Archaeocyon_falkenbachi	23.893	23.893	
+Archaeocyon_leptodus	31.688	20.924	
+Archaeocyon_pavidus	32.989	28.31	
+Borophaginae	22.649	5.156	
+Borophagus	14.639	2.023	
+Borophagus_diversidens	4.845	1.823	
+Borophagus_dudleyi	3.965	3.965	
+Borophagus_hilli	17.23	2.254	
+Borophagus_littoralis	13.491	5.656	
+Borophagus_orc	8.166	3.618	
+Borophagus_parvus	8.444	7.714	
+Borophagus_pugnator	21.502	5.592	
+Borophagus_secundus	20.696	5.204	
+Caedocyon_tedfordi	20.798	20.798	
+Canidae	36.782	0.036	
+Caninae	25.369	0.016	
+Canini	8.279	2.822	
+Canis	11.288	0.003	
+Canis_(Pseudalopex)	0.614	0.055	
+Canis_adustus	2.738	0.002	extant
+Canis_anthus	1.274	1.2	extant
+Canis_apolloniensis	1.13	1.13	
+Canis_armbrusteri	3.802	0.064	
+Canis_aureus	3.191	0.001	extant
+Canis_cedazoensis	1.036	1.036	
+Canis_dirus	2.416	0.013	
+Canis_edwardii	9.677	0.345	
+Canis_familiaris	0.704	0.002	extant
+Canis_ferox	9.182	2.174	
+Canis_latrans	4.774	0.003	extant
+Canis_lepophagus	9.105	0.077	
+Canis_lupus	3.386	0.003	extant
+Canis_mesomelas	5.307	0.002	extant
+Canis_proplatensis	1.822	1.822	
+Canis_rufus	3.988	0.097	extant
+Canis_thooides	4.875	4.875	
+Carpocyon	15.097	9.619	
+Carpocyon_compressus	19.741	12.68	
+Carpocyon_limosus	8.271	5.532	
+Carpocyon_robustus	16.736	10.797	
+Carpocyon_webbi	15.498	9.198	
+Cerdocyon_avius	4.04	3.177	
+Cerdocyon_texanus	7.124	2.907	
+Cerdocyon_thous	0.088	0.002	
+Chailicyon_crassidens	39.808	39.808	
+Chrysocyon	0.283	0.283	
+Chrysocyon_brachyurus	2.155	0.859	
+Chrysocyon_nearcticus	3.045	2.638	
+Cormocyon	28.301	28.301	
+Cormocyon_copei	26.785	7.706	
+Cormocyon_haydeni	29.641	20.637	
+Cubacyon_transversidens	1.291	1.291	
+Cuon	0.752	0.093	
+Cuon_alpinus	2.255	0.059	
+Cynarctoides_acridens	25.906	13.793	
+Cynarctoides_emryi	19.755	18.885	
+Cynarctoides_gawnae	16.067	15.665	
+Cynarctoides_harlowi	22.882	22.882	
+Cynarctoides_lemur	30.585	22.633	
+Cynarctoides_luskensis	24.523	20.851	
+Cynarctoides_roii	30.219	24.314	
+Cynarctoides_whistleri	16.194	16.072	
+Cynarctus	14.371	5.848	
+Cynarctus_crucidens	20.209	6.012	
+Cynarctus_galushai	15.887	13.705	
+Cynarctus_marylandica	18.934	13.973	
+Cynarctus_saxatilis	15.558	13.926	
+Cynarctus_voorhiesi	12.285	11.847	
+Cynarctus_wangi	14.922	14.922	
+Cynodesmus_martini	20.529	20.529	
+Cynodesmus_thooides	33.093	21.401	
+Cynodictis	54.654	28.619	
+Cynodictis_lacustris	37.548	34.182	
+Cynotherium	0.692	0.015	
+Cynotherium_sardous	1.833	0.122	
+Desmocyon	23.271	23.271	
+Desmocyon_matthewi	20.136	17.727	
+Desmocyon_thomsoni	29.467	7.126	
+Dusicyon	1.24	0.006	
+Dusicyon_avus	0.702	0.048	
+Dusicyon_culpaeus	2.206	2.206	
+Dusicyon_sechurae	0.416	0.416	
+Ectopocynus_antiquus	32.125	23.428	
+Ectopocynus_intermedius	23.84	23.84	
+Ectopocynus_simplicidens	18.861	16.023	
+Enhydrocyon	33.221	23.158	
+Enhydrocyon_basilatus	21.974	21.974	
+Enhydrocyon_crassidens	26.867	20.665	
+Enhydrocyon_pahinsintewakpa	27.961	21.238	
+Enhydrocyon_stenocephalus	30.025	29.587	
+Epicyon	12.406	5.88	
+Epicyon_aelurodontoides	5.32	5.32	
+Epicyon_haydeni	21.234	5.295	
+Epicyon_saevus	20.759	5.172	
+Eucyon	9.822	3.238	
+Eucyon_davisi	10.223	4.443	
+Eucyon_skinneri	11.217	11.217	
+Euoplocyon_brachygnathus	19.772	14.06	
+Euoplocyon_spissidens	18.6	18.6	
+Gobicyon	13.273	8.071	
+Hesperocyon	44.637	21.002	
+Hesperocyon_coloradensis	33.812	33.462	
+Hesperocyon_gregarius	37.589	31.018	
+Hesperocyoninae	28.333	24.572	
+Leptocyon	23.924	7.045	
+Leptocyon_delicatus	28.239	28.239	
+Leptocyon_douglassi	28.997	22.914	
+Leptocyon_gregorii	23.363	21.501	
+Leptocyon_leidyi	21.136	13.979	
+Leptocyon_matthewi	13.053	10.486	
+Leptocyon_mollis	21.907	21.907	
+Leptocyon_tejonensis	10.381	10.381	
+Leptocyon_vafer	20.029	6.874	
+Leptocyon_vulpinus	26.534	16.82	
+Lycaon	3.058	0.088	
+Lycaon_pictus	2.237	0.001	
+Mesocyon	27.473	27.473	
+Mesocyon_brachyops	23.661	20.978	
+Mesocyon_coryphaeus	23.975	21.624	
+Mesocyon_temnodon	33.79	23.676	
+Metalopex_bakeri	8.988	8.988	
+Metalopex_macconnelli	21.502	7.049	
+Metalopex_merriami	15.955	5.064	
+Metatomarctus	21.739	21.739	
+Metatomarctus_canavus	20.187	10.702	
+Microtomarctus_conferta	21.325	7.192	
+Neovulpavus_washakius	42.309	42.309	
+Nyctereutes	7.965	0.848	
+Nyctereutes_abdeslami	3.309	3.135	
+Nyctereutes_procyonoides	2.542	0.022	
+Osbornodon_brachypus	24.011	19.83	
+Osbornodon_fricki	19.379	13.86	
+Osbornodon_iamonensis	21.843	18.453	
+Osbornodon_renjiei	33.655	31.506	
+Osbornodon_scitulus	19.035	16.713	
+Osbornodon_sesnoni	32.014	20.662	
+Osbornodon_wangi	22.056	22.056	
+Otarocyon_cooki	28.669	20.778	
+Otarocyon_macdonaldi	33.888	33.453	
+Otocyon	3.204	0.03	
+Otocyon_megalotis	2.165	0.005	
+Oxetocyon	31.832	31.295	
+Oxetocyon_cuspidatus	33.271	32.575	
+Paracynarctus_kelloggi	23.03	6.191	
+Paracynarctus_sinclairi	18.842	13.676	
+Paraenhydrocyon_josephi	30.545	20.557	
+Paraenhydrocyon_robustus	21.755	21.332	
+Paraenhydrocyon_wallovianus	25.838	20.598	
+Paratomarctus_euthos	15.51	7.506	
+Paratomarctus_temerarius	22.081	5.359	
+Philotrox_condoni	30.378	27.561	
+Phlaocyon	29.181	16.47	
+Phlaocyon_achoros	23.427	23.427	
+Phlaocyon_annectens	23.84	20.519	
+Phlaocyon_latidens	32.562	27.659	
+Phlaocyon_leucosteus	23.743	16.55	
+Phlaocyon_mariae	20.235	20.235	
+Phlaocyon_marslandensis	19.859	17.748	
+Phlaocyon_minor	30.718	20.293	
+Phlaocyon_multicuspus	23.269	23.269	
+Phlaocyon_taylori	29.992	21.575	
+Phlaocyon_yatkolai	19.092	19.092	
+Protemnocyon_inflatus	33.325	33.325	
+Protepicyon_raki	15.482	13.833	
+Protocyon	2.404	0.098	
+Protocyon_orcesi	0.12	0.12	
+Protocyon_tarijensis	1.2	1.2	
+Protocyon_troglodytes	0.788	0.003	
+Protomarctus_optatus	22.379	13.98	
+Psalidocyon_marianae	19.842	14.375	
+Pseudalopex_gymnocercus	2.525	0.009	extant
+Rhizocyon_oregonensis	29.594	21.376	
+Speothos	2.48	2.48	
+Speothos_venaticus	0.009	0.009	
+Sunkahetanka_geringensis	30.451	20.734	
+Tephrocyon_rurestris	14.779	8.092	
+Theriodictis	1.077	0.078	
+Theriodictis_floridanus	4.07	3.691	
+Tomarctus	15.356	10.159	
+Tomarctus_brevirostris	21.923	13.996	
+Tomarctus_hippophaga	20.385	12.926	
+Urocyon	11.208	0.082	
+Urocyon_cinereoargenteus	2.972	0.008	
+Urocyon_citrinus	2.12	2.12	
+Urocyon_galushai	4.517	2.159	
+Urocyon_minicephalus	1.334	0.967	
+Urocyon_progressus	2.792	2.792	
+Urocyon_webbi	5.554	5.554	
+Vulpes	8.761	0.011	
+Vulpes_cascadensis	0.097	0.097	
+Vulpes_chama	2.394	0.001	
+Vulpes_kernensis	10.358	10.358	
+Vulpes_mathisoni	4.703	4.703	
+Vulpes_stenognathus	15.468	1.129	
+Vulpes_velox	2.818	0.017	
+Vulpes_vulpes	2.693	0.003	
+Vulpes_vulpes_macroura	0.057	0.057	
+Vulpini	0.073	0.073	
+Xenocyon	1.59	0.569	
+Xenocyon_lycaonoides	2.342	0.5	
+Xenocyon_texanus	1.736	1.736	
